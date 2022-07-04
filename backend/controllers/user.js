@@ -55,7 +55,7 @@ exports.login = (req, res, next) => {
           res.status(200).json({
             //Encodage du userId pour la création de nouveau objet(objet et userId seront liés)
             userId: user._id,
-            token: jwt.sign({ userId: user._id }, "RANDOM_TOKEN_SECRET", 
+            token: jwt.sign({ userId: user._id }, process.env.TOKEN, 
             {
               expiresIn: "24h",
             }),
@@ -66,4 +66,6 @@ exports.login = (req, res, next) => {
     })
     .catch((error) => res.status(500).json({ error }));
 };
+
+
 
