@@ -1,4 +1,9 @@
- # Backend  
- Pour lancer le serveur : `$ ng serve`
- 
-Dans le terminal : Projet_n°6\frontend\Web-Developer-P6> ng serve
+ # Frontend  
+ Pour lancer le Serveur http://localhost:4200 : Projet_n°6\frontend\Web-Developer-P6> : `$ ng serve`
+
+# Backend  
+ Pour lancer le Port http://localhost:3000 : `$ nodemon server`
+
+
+
+
