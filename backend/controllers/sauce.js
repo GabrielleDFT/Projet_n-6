@@ -79,20 +79,20 @@ exports.deleteSauce = (req, res, next) => {
     .catch((error) => res.status(500).json({ error }));
 };
 
-    //--Display All Sauces--
+//--------------------------------Display All Sauces------------------------------------- 
 exports.getAllSauce = (req, res, next) => {
   Sauce.find()
     .then((sauces) => res.status(200).json(sauces))
     .catch((error) => res.status(400).json({ error }));
 };
-    //--Display Only 1 Sauce--
+//--------------------------------Display Only 1 Sauce------------------------------------- 
 exports.getOneSauce = (req, res, next) => {
     Sauce.findOne({_id: req.params.id})
         .then(sauces => res.status(200).json(sauces))
         .catch(error => res.status(404).json({ error }));
 };
 
-    //--Manage Likes & Dislikes-
+//--------------------------------Manage Likes & Dislikes------------------------------------- 
 exports.likeSauce = (req, res, next) => {
   if (req.body.like === 1) {
     Sauce.updateOne(
@@ -143,13 +143,5 @@ exports.likeSauce = (req, res, next) => {
       .catch((error) => res.status(400).json({ error }));
   }
 };
-
-
-
-
-
-
-
-
 
 
